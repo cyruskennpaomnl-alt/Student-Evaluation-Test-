@@ -1,0 +1,595 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"/&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;</p>
+<p class="p1">&lt;title&gt;Hey Verdel Marie 🌸&lt;/title&gt;</p>
+<p class="p1">&lt;link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&amp;family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1">*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}</p>
+<p class="p2"><br></p>
+<p class="p1">:root{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--pink:#ffb3c6;--pink2:#ff85a1;--peach:#ffd6b3;--peach2:#ffb085;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--lavender:#d4b8e0;--lav2:#b894d4;--gold:#f9c846;--cream:#fff9f5;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>--white:#ffffff;--text:#6b4c5a;--soft:#fce4ec;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">html,body{width:100%;height:100%;overflow:hidden;background:var(--cream);}</p>
+<p class="p2"><br></p>
+<p class="p1">body{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family:'Nunito',sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:flex;align-items:center;justify-content:center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position:relative;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color:var(--text);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ─── Soft Bokeh Background ─── */</p>
+<p class="p1">body::before{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>content:'';position:fixed;inset:0;z-index:0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:</p>
+<p class="p1"><span class="Apple-converted-space">    </span>radial-gradient(circle at 15% 15%, rgba(255,179,198,.5) 0%, transparent 40%),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>radial-gradient(circle at 85% 20%, rgba(212,184,224,.5) 0%, transparent 40%),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>radial-gradient(circle at 50% 85%, rgba(255,214,179,.5) 0%, transparent 45%),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>radial-gradient(circle at 80% 70%, rgba(249,200,70,.2) 0%, transparent 40%);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>filter: blur(20px);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ─── Stars &amp; Floating Elements ─── */</p>
+<p class="p1">.stars{position:fixed;inset:0;z-index:0;pointer-events:none}</p>
+<p class="p1">.star{position:absolute;border-radius:50%;animation:twinkle ease-in-out infinite}</p>
+<p class="p1">@keyframes twinkle{0%,100%{opacity:.2;transform:scale(.8)}50%{opacity:.9;transform:scale(1.2)}}</p>
+<p class="p2"><br></p>
+<p class="p1">.floaty{position:fixed;pointer-events:none;z-index:1;animation:floatUpBg linear infinite;opacity:0;font-size:1.5rem}</p>
+<p class="p1">@keyframes floatUpBg{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>0%{opacity:0;transform:translateY(10vh) rotate(0deg) scale(.8)}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>20%{opacity:.6} 80%{opacity:.4}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>100%{opacity:0;transform:translateY(-110vh) rotate(360deg) scale(1.1)}</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ─── Screens ─── */</p>
+<p class="p1">.screen{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position:fixed;inset:0;display:flex;align-items:center;justify-content:center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>z-index:10;transition:opacity .6s cubic-bezier(0.4, 0, 0.2, 1), transform .6s cubic-bezier(0.4, 0, 0.2, 1);</p>
+<p class="p1">}</p>
+<p class="p1">.screen.hidden{opacity:0;pointer-events:none;transform:scale(.95) translateY(20px)}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ─── Cute Card ─── */</p>
+<p class="p1">.card{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:rgba(255,255,255,.85);backdrop-filter:blur(16px);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:32px;padding:44px 40px;max-width:480px;width:92%;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>text-align:center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>box-shadow:0 12px 40px rgba(180,100,140,.12), inset 0 0 0 2px rgba(255,255,255,0.8);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:2px solid rgba(255,179,198,.6);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>animation:cardIn .8s cubic-bezier(.34,1.56,.64,1) both;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position: relative;</p>
+<p class="p1">}</p>
+<p class="p1">@keyframes cardIn{from{opacity:0;transform:translateY(40px) scale(.95)}to{opacity:1;transform:none}}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ─── Typography &amp; Tags ─── */</p>
+<p class="p1">.tag{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:inline-block;background:linear-gradient(135deg, #fff0f5, #ffe0ec);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:1.5px solid var(--pink);border-radius:50px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:6px 20px;font-size:.8rem;letter-spacing:1.5px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>text-transform:uppercase;color:var(--pink2);font-weight:800;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-bottom:18px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>box-shadow: 0 4px 12px rgba(255,133,161,.15);</p>
+<p class="p1">}</p>
+<p class="p1">h1{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family:'Playfair Display',serif;font-size:2.1rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color:var(--text);line-height:1.25;margin-bottom:12px;</p>
+<p class="p1">}</p>
+<p class="p1">h1 em{color:var(--pink2);font-style:italic;}</p>
+<p class="p1">.sub{font-size:.95rem;color:#9b7a8a;font-weight:600;line-height:1.6;margin-bottom:22px}</p>
+<p class="p2"><br></p>
+<p class="p1">/* Brush Highlight for Name */</p>
+<p class="p1">.brush-hl{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:inline-block; position:relative; z-index:1;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color:#6b4c5a; font-weight:700; font-style:italic;</p>
+<p class="p1">}</p>
+<p class="p1">.brush-hl::before{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>content:''; position:absolute; inset:-2px -8px; z-index:-1;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:linear-gradient(100deg, var(--gold), #ffe484);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:8px 12px 10px 6px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>transform: rotate(-1deg);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>opacity:0.8;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ─── Interactive Minigame Area ─── */</p>
+<p class="p1">.game-container {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:linear-gradient(to bottom, rgba(255,255,255,0.6), rgba(255,240,245,0.8));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:2.5px dashed var(--pink2);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:24px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>height:180px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position:relative;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>overflow:hidden;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin:15px 0 20px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>box-shadow: inset 0 4px 15px rgba(0,0,0,0.03);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>cursor: crosshair;</p>
+<p class="p1">}</p>
+<p class="p1">.game-ui {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:flex; justify-content:space-between; align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>margin-bottom:10px; padding:0 5px;</p>
+<p class="p1">}</p>
+<p class="p1">.score-board {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-weight:800; color:var(--pink2); font-size:1rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:#fff; padding:6px 16px; border-radius:30px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:2px solid var(--pink); box-shadow:0 4px 10px rgba(255,179,198,.3);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* Floating Targets */</p>
+<p class="p1">.game-target {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position:absolute; font-size:2.2rem; cursor:pointer; user-select:none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>animation: floatUpGame 3s linear forwards, sway 1.5s ease-in-out infinite alternate;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>transition: transform 0.1s;</p>
+<p class="p1">}</p>
+<p class="p1">.game-target:active { transform: scale(0.8); }</p>
+<p class="p1">@keyframes floatUpGame {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>0% { bottom:-50px; opacity:1; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>100% { bottom:110%; opacity:1; }</p>
+<p class="p1">}</p>
+<p class="p1">@keyframes sway {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>0% { margin-left:-20px; transform:rotate(-10deg); }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>100% { margin-left:20px; transform:rotate(10deg); }</p>
+<p class="p1">}</p>
+<p class="p1">.pop-anim {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>animation: popTarget 0.4s ease-out forwards !important;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>pointer-events: none;</p>
+<p class="p1">}</p>
+<p class="p1">@keyframes popTarget {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>0% { transform: scale(1); opacity:1; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>50% { transform: scale(1.4); opacity:0.8; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>100% { transform: scale(0); opacity:0; }</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ─── Verse box ─── */</p>
+<p class="p1">.verse-box{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:linear-gradient(135deg,rgba(255,214,179,.3),rgba(249,200,70,.15));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:2px solid rgba(255,255,255,0.6); border-radius:20px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:22px 24px;font-family:'Playfair Display',serif;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-style:italic;font-size:1rem;color:var(--text);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>line-height:1.6;margin-bottom:24px;position:relative;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>box-shadow: 0 8px 20px rgba(0,0,0,0.04);</p>
+<p class="p1">}</p>
+<p class="p1">.verse-box::before{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>content:'"';font-size:4rem;color:var(--gold);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>opacity:.4;position:absolute;top:-15px;left:10px;line-height:1;font-family:'Playfair Display',serif</p>
+<p class="p1">}</p>
+<p class="p1">.verse-ref{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family:'Nunito',sans-serif; font-style:normal;font-size:.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color:#b8860b;font-weight:800;display:block;margin-top:10px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>text-align:right;letter-spacing:1px;text-transform:uppercase;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ─── Progress dots ─── */</p>
+<p class="p1">.dots{display:flex;gap:10px;justify-content:center;margin-bottom:28px}</p>
+<p class="p1">.dot{width:10px;height:10px;border-radius:50%;background:var(--pink);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>opacity:.3;transition:all .4s cubic-bezier(.34,1.56,.64,1)}</p>
+<p class="p1">.dot.active{opacity:1;transform:scale(1.5); background:var(--pink2)}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ─── Buttons ─── */</p>
+<p class="p1">.btn{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>display:inline-flex;align-items:center;justify-content:center;gap:8px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:16px 36px;border-radius:50px;border:none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family:'Nunito',sans-serif;font-size:1rem;font-weight:800;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>cursor:pointer;transition:all .3s cubic-bezier(.34,1.56,.64,1);</p>
+<p class="p1">}</p>
+<p class="p1">.btn-primary{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:linear-gradient(135deg, var(--pink2), var(--lav2));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>color:#fff; box-shadow:0 8px 24px rgba(255,133,161,.4);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>width: 100%;</p>
+<p class="p1">}</p>
+<p class="p1">.btn-primary:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 12px 30px rgba(255,133,161,.5)}</p>
+<p class="p1">.btn-primary:active{transform:scale(.97)}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ─── No button ─── */</p>
+<p class="p1">#noBtn{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:#fff;color:var(--text);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border:2.5px solid var(--pink);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>font-family:'Nunito',sans-serif;font-size:.9rem;font-weight:800;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>padding:14px 28px;border-radius:50px;cursor:pointer;transition:none;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position:relative;display:inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>box-shadow:0 4px 15px rgba(255,133,161,.15);</p>
+<p class="p1">}</p>
+<p class="p1">#noBtn.running{</p>
+<p class="p1"><span class="Apple-converted-space">  </span>position:fixed;transition:left .2s ease-out,top .2s ease-out;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>z-index:999;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ─── Progress bar ─── */</p>
+<p class="p1">.progress-wrap{height:8px;background:rgba(255,179,198,.25);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>border-radius:50px;overflow:hidden;margin-bottom:15px; width: 80%; margin-left: auto; margin-right: auto;}</p>
+<p class="p1">.progress-fill{height:100%;border-radius:50px;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>background:linear-gradient(90deg,var(--pink2),var(--gold));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>transition:width .6s cubic-bezier(.34,1.56,.64,1)}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ─── Heart trail ─── */</p>
+<p class="p1">.heart-trail{position:fixed;pointer-events:none;z-index:5;font-size:1.2rem;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>animation:heartFade .8s ease-out forwards; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1))}</p>
+<p class="p1">@keyframes heartFade{0%{opacity:.8;transform:scale(0.5)}50%{transform:scale(1.2)}100%{opacity:0;transform:scale(1) translateY(-40px)}}</p>
+<p class="p2"><br></p>
+<p class="p1">/* ─── Screen 1 opener ─── */</p>
+<p class="p1">.envelope-wrap{margin:15px 0 24px;display:inline-block;position:relative}</p>
+<p class="p1">.envelope{font-size:4.5rem;cursor:pointer;display:block;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>transition:transform .3s;animation:envelopePulse 2s ease-in-out infinite;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>filter: drop-shadow(0 10px 15px rgba(255,133,161,.2))}</p>
+<p class="p1">@keyframes envelopePulse{0%,100%{transform:scale(1) rotate(-3deg)}50%{transform:scale(1.08) rotate(3deg)}}</p>
+<p class="p1">.envelope:hover{transform:scale(1.15) rotate(0)!important;animation:none}</p>
+<p class="p1">.tap-hint{font-size:.8rem;color:var(--lav2);font-weight:700;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>letter-spacing:1px;margin-top:8px;animation:blink 1.5s ease-in-out infinite}</p>
+<p class="p1">@keyframes blink{0%,100%{opacity:.4}50%{opacity:1}}</p>
+<p class="p2"><br></p>
+<p class="p1">/* Dividers &amp; Stickers */</p>
+<p class="p1">.stickers{font-size:1.6rem;letter-spacing:12px;margin-bottom:16px; animation:fadeUp .5s .3s both}</p>
+<p class="p1">.div-cute{display:flex;align-items:center;gap:12px;margin:20px 0;color:var(--pink);font-size:.8rem;}</p>
+<p class="p1">.div-cute::before,.div-cute::after{content:'';flex:1;height:2px;background:linear-gradient(to right,transparent,var(--pink),transparent)}</p>
+<p class="p2"><br></p>
+<p class="p1">@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="stars" id="stars"&gt;&lt;/div&gt;</p>
+<p class="p1">&lt;div id="floaties"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ══ SCREEN 1 — ENVELOPE ══ --&gt;</p>
+<p class="p1">&lt;div class="screen" id="s1"&gt;</p>
+<p class="p1">&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="tag"&gt;✨ For You ✨&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;A little letter for&lt;br/&gt;&lt;span class="brush-hl"&gt;Verdel Marie&lt;/span&gt;...&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="sub" style="margin-top:15px;"&gt;Tap the envelope to open it!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="envelope-wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="envelope" onclick="openEnvelope()" title="Open me!"&gt;💌&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="tap-hint"&gt;tap to open&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="sub" style="font-size:.8rem;margin-bottom:0;opacity:.7"&gt;From a brother in Christ 🌿&lt;/p&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ══ SCREEN 2 — CATCH THE BLESSINGS MINIGAME ══ --&gt;</p>
+<p class="p1">&lt;div class="screen hidden" id="s2"&gt;</p>
+<p class="p1">&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="tag"&gt;🎮 Little Challenge &lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1 style="font-size: 1.8rem"&gt;Catch the Blessings!&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="sub" style="margin-bottom:5px;"&gt;Tap 6 floating items below to unlock your message ✨&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="game-ui"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="score-board"&gt;Caught: &lt;span id="scoreText"&gt;0&lt;/span&gt; / 6&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="font-size: 1.2rem;"&gt;☕ 🕊️ ⭐&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="game-container" id="gameArea"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Targets are dynamically spawned here --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button id="unlockBtn" class="btn btn-primary" style="display:none;" onclick="goTo(3)"&gt;Read the Letter 💌&lt;/button&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ══ SCREEN 3 — THE INTRODUCTION ══ --&gt;</p>
+<p class="p1">&lt;div class="screen hidden" id="s3"&gt;</p>
+<p class="p1">&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="dots"&gt;&lt;div class="dot active"&gt;&lt;/div&gt;&lt;div class="dot"&gt;&lt;/div&gt;&lt;div class="dot"&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="stickers"&gt;☕ 🕊️ 📖 🕊️ ☕&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="verse-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>"Therefore encourage one another and build each other up, just as in fact you are doing."</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="verse-ref"&gt;— 1 Thessalonians 5:11&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1 style="font-size:1.6rem"&gt;Hi &lt;span class="brush-hl"&gt;Verdel Marie,&lt;/span&gt; 💛&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="sub" style="margin-bottom:24px; font-size: 1rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>God brings people across our paths in unexpected ways. Even though we haven't officially met yet, this verse reminded me of the beauty of Godly fellowship. 🙏</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="btn btn-primary" onclick="goTo(4)"&gt;Continue ✨&lt;/button&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ══ SCREEN 4 — ENCOURAGEMENT ══ --&gt;</p>
+<p class="p1">&lt;div class="screen hidden" id="s4"&gt;</p>
+<p class="p1">&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="dots"&gt;&lt;div class="dot"&gt;&lt;/div&gt;&lt;div class="dot active"&gt;&lt;/div&gt;&lt;div class="dot"&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="tag"&gt;💌 My Intention&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1 style="font-size: 1.8rem"&gt;Purely Uplifting 🌼&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="div-cute"&gt;🌿&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="sub" style="font-size: 1rem; text-align: left; padding: 0 10px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>I’ve noticed you around, and I truly admire the genuine joy and grace you seem to carry. &lt;br&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>I’d love the chance to properly introduce myself. No pressure at all—just an opportunity to share a good conversation, share some laughs, and get to know each other as brother and sister in Christ. ✨</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="btn btn-primary" onclick="goTo(5)" style="margin-top: 10px;"&gt;That sounds nice 🥺 →&lt;/button&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ══ SCREEN 5 — THE QUESTION ══ --&gt;</p>
+<p class="p1">&lt;div class="screen hidden" id="s5"&gt;</p>
+<p class="p1">&lt;div class="card" style="overflow:visible"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="dots"&gt;&lt;div class="dot"&gt;&lt;/div&gt;&lt;div class="dot"&gt;&lt;/div&gt;&lt;div class="dot active"&gt;&lt;/div&gt;&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="progress-wrap" style="margin-top:10px; margin-bottom:25px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="progress-fill" id="pBar" style="width:0%"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1 style="font-size:1.6rem;margin-bottom:12px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Are you free this&lt;br/&gt;&lt;span class="brush-hl" style="font-size: 2.2rem; margin-top:5px;"&gt;Saturday&lt;/span&gt;&lt;br/&gt;for an</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1 style="font-size:1.9rem;margin-bottom:16px; color: var(--pink2);"&gt;Encouragement Date? ☕💛&lt;/h1&gt;</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="sub" style="font-size:.9rem;margin-bottom:28px"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Good food 🍵 · Good faith 🙏 · Wholesome vibes 🌸&lt;br/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div style="display:flex;gap:15px;justify-content:center;align-items:center;flex-wrap:wrap;position:relative;min-height:60px" id="btnArea"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="btn btn-primary" style="width: auto; padding: 14px 28px;" onclick="sayYes()"&gt;Yes!! I'm in! 🎉&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button id="noBtn" onclick="noBtnClick()"&gt;Nope 🙈&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="reactText" style="min-height:26px;font-size:.85rem;font-weight:700;color:var(--pink2);margin-top:15px;"&gt;&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ══ SCREEN 6 — YES ══ --&gt;</p>
+<p class="p1">&lt;div class="screen hidden" id="s6"&gt;</p>
+<p class="p1">&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;span style="font-size:4rem;display:block;animation:cardIn .6s cubic-bezier(.34,1.56,.64,1) both"&gt;🎊&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1 style="font-size:2.4rem; margin:10px 0;"&gt;Yeyy!!&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="div-cute" style="margin:16px 0"&gt;🌸&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="sub" style="font-size:1.05rem; line-height:1.8;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;strong&gt;Verdel Marie,&lt;/strong&gt; you just made my day! 🥹&lt;br/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>I'm really looking forward to officially meeting you this Saturday.&lt;br/&gt;&lt;br/&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Let's talk soon to figure out the time and place! ✨</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="verse-box" style="margin-top:20px; padding: 15px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>"The Lord bless you and keep you; the Lord make his face shine on you..."</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span class="verse-ref"&gt;— Numbers 6:24-25&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="stickers" style="margin-top:20px;margin-bottom:0"&gt;⭐ 💛 🕊️ 💛 ⭐&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">// ─── Visual Effects (Stars &amp; Background Emojis) ───</p>
+<p class="p1">const starsEl = document.getElementById('stars');</p>
+<p class="p1">for(let i=0; i&lt;40; i++){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const s = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>s.className = 'star';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const size = 2 + Math.random()*4;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>Object.assign(s.style,{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width: size+'px', height: size+'px',</p>
+<p class="p1"><span class="Apple-converted-space">    </span>left: Math.random()*100+'vw', top: Math.random()*100+'vh',</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background: ['#ffb3c6','#d4b8e0','#ffd6b3','#f9c846','#fff'][Math.floor(Math.random()*5)],</p>
+<p class="p1"><span class="Apple-converted-space">    </span>animationDuration: (2+Math.random()*4)+'s',</p>
+<p class="p1"><span class="Apple-converted-space">    </span>animationDelay: (Math.random()*3)+'s',</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>starsEl.appendChild(s);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">const floatyEl = document.getElementById('floaties');</p>
+<p class="p1">const fEmojis = ['🌸','✨','💛','🌿','🕊️','☕','📖','⭐'];</p>
+<p class="p1">function spawnFloatBg(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const f = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>f.className = 'floaty';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>f.textContent = fEmojis[Math.floor(Math.random()*fEmojis.length)];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const dur = 8 + Math.random()*10;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>Object.assign(f.style,{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>left: Math.random()*100+'vw', bottom: '-50px',</p>
+<p class="p1"><span class="Apple-converted-space">    </span>animationDuration: dur+'s', animationDelay: (Math.random()*2)+'s',</p>
+<p class="p1"><span class="Apple-converted-space">    </span>fontSize: (1 + Math.random()*.8)+'rem',</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>floatyEl.appendChild(f);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>setTimeout(()=&gt;f.remove(), (dur+2)*1000);</p>
+<p class="p1">}</p>
+<p class="p1">for(let i=0; i&lt;8; i++) setTimeout(spawnFloatBg, i*600);</p>
+<p class="p1">setInterval(spawnFloatBg, 1500);</p>
+<p class="p2"><br></p>
+<p class="p1">// Heart Trail on Move</p>
+<p class="p1">let lastHeart = 0;</p>
+<p class="p1">document.addEventListener('mousemove', e =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const now = Date.now();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(now - lastHeart &lt; 100) return;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>lastHeart = now;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const h = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>h.className = 'heart-trail';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>h.textContent = ['💖','✨','⭐','🕊️'][Math.floor(Math.random()*4)];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>Object.assign(h.style, {left: (e.clientX-10)+'px', top: (e.clientY-15)+'px'});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.body.appendChild(h);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>setTimeout(()=&gt;h.remove(), 800);</p>
+<p class="p1">});</p>
+<p class="p2"><br></p>
+<p class="p1">// ─── Navigation ───</p>
+<p class="p1">let current = 1;</p>
+<p class="p1">function goTo(n){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('s'+current).classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('s'+n).classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>current = n;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(n === 2) startGame();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(n === 5) startProgressBar();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function openEnvelope(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const env = document.querySelector('.envelope');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>env.textContent = '💝';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>env.style.animation = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>env.style.transform = 'scale(1.2)';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>setTimeout(()=&gt;goTo(2), 500);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ─── Minigame: Catch the Blessings ───</p>
+<p class="p1">let gameScore = 0;</p>
+<p class="p1">const targetEmojis = ['☕','🕊️','⭐','📖','🤍','✨'];</p>
+<p class="p1">let gameInterval;</p>
+<p class="p2"><br></p>
+<p class="p1">function startGame() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>gameScore = 0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('scoreText').textContent = gameScore;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('gameArea').innerHTML = '';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('unlockBtn').style.display = 'none';</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Spawn a new item every 700ms</p>
+<p class="p1"><span class="Apple-converted-space">  </span>gameInterval = setInterval(spawnGameTarget, 700);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function spawnGameTarget() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if (gameScore &gt;= 6) return;<span class="Apple-converted-space"> </span></p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const area = document.getElementById('gameArea');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const target = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>target.className = 'game-target';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>target.textContent = targetEmojis[Math.floor(Math.random() * targetEmojis.length)];</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Random horizontal position</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const x = 10 + Math.random() * (area.clientWidth - 50);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>target.style.left = x + 'px';</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Randomize speed</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const speed = 2.5 + Math.random() * 2;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>target.style.animationDuration = `${speed}s, 1.5s`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Click to catch</p>
+<p class="p1"><span class="Apple-converted-space">  </span>target.onmousedown = target.ontouchstart = function(e) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>e.preventDefault(); // Prevent double firing on touch</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(target.classList.contains('pop-anim')) return;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>target.classList.add('pop-anim');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>target.textContent = '✨';</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>gameScore++;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('scoreText').textContent = gameScore;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(gameScore &gt;= 6) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>clearInterval(gameInterval);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>area.innerHTML = '&lt;div style="display:flex; height:100%; align-items:center; justify-content:center; color:var(--pink2); font-weight:800; font-size:1.4rem; animation:cardIn 0.5s;"&gt;🔓 Letter Unlocked! 🎉&lt;/div&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('unlockBtn').style.display = 'inline-flex';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}, 500);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>area.appendChild(target);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Cleanup after animation</p>
+<p class="p1"><span class="Apple-converted-space">  </span>setTimeout(() =&gt; { if(target.parentNode) target.remove(); }, speed * 1000);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ─── Progress Bar (Screen 5) ───</p>
+<p class="p1">function startProgressBar(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>let w = 0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const fill = document.getElementById('pBar');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const iv = setInterval(()=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>w = Math.min(w+1.5, 80);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>fill.style.width = w+'%';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(w &gt;= 80) clearInterval(iv);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}, 25);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ─── Dodging "No" Button ───</p>
+<p class="p1">let noClicks = 0;</p>
+<p class="p1">const reactions = [</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Haha, nice try! 😂", "The button literally said nope 🙈",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Try catching it! 😜", "Not an option today! 💕",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"Come on, Verdel! 🌸", "Wholesome vibes only! ☕",</p>
+<p class="p1"><span class="Apple-converted-space">  </span>"It's running away! 🏃‍♂️💨", "Just say yes! 😇",</p>
+<p class="p1">];</p>
+<p class="p2"><br></p>
+<p class="p1">function noBtnClick(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>noClicks++;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const btn = document.getElementById('noBtn');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>btn.classList.add('running');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>moveNoBtn();</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const rt = document.getElementById('reactText');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>rt.textContent = reactions[Math.min(noClicks-1, reactions.length-1)];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>rt.style.animation = 'none'; void rt.offsetWidth; rt.style.animation = 'fadeUp 0.3s both';</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Tease the progress bar</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const fill = document.getElementById('pBar');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const cur = parseFloat(fill.style.width) || 80;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>fill.style.width = Math.min(cur+3, 95) + '%';</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function moveNoBtn(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const btn = document.getElementById('noBtn');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const safeZone = 60;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const maxX = window.innerWidth - btn.offsetWidth - safeZone;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const maxY = window.innerHeight - btn.offsetHeight - safeZone;</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const x = safeZone + Math.random() * (maxX - safeZone);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const y = safeZone + Math.random() * (maxY - safeZone);</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>btn.style.left = x + 'px';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>btn.style.top = y + 'px';</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// Hover trigger for desktop</p>
+<p class="p1">document.addEventListener('DOMContentLoaded', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const nb = document.getElementById('noBtn');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>nb.addEventListener('mouseover', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(nb.classList.contains('running')) moveNoBtn();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Touch support for mobile dodging</p>
+<p class="p1"><span class="Apple-converted-space">  </span>nb.addEventListener('touchstart', (e) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>e.preventDefault(); noBtnClick();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}, {passive: false});</p>
+<p class="p1">});</p>
+<p class="p2"><br></p>
+<p class="p1">// ─── YES Action ───</p>
+<p class="p1">function sayYes(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const fill = document.getElementById('pBar');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>fill.style.width = '100%';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>fill.style.background = 'linear-gradient(90deg, #ff85a1, #f9c846)';</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const nb = document.getElementById('noBtn');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(nb) nb.style.display = 'none';</p>
+<p class="p2"><span class="Apple-converted-space">  </span></p>
+<p class="p1"><span class="Apple-converted-space">  </span>setTimeout(()=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>goTo(6);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>launchConfetti();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}, 400);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// ─── Confetti Explosion ───</p>
+<p class="p1">function launchConfetti(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const colors = ['#ffb3c6','#ff85a1','#d4b8e0','#ffd6b3','#f9c846','#fff'];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>for(let i=0; i&lt;150; i++){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>setTimeout(()=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const c = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>c.style.position = 'fixed';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>c.style.zIndex = '200';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>c.style.pointerEvents = 'none';</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const size = 5 + Math.random()*8;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const isCircle = Math.random() &gt; 0.5;</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>Object.assign(c.style,{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>left: Math.random()*100 + 'vw', top: '-20px',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>width: size+'px', height: size + (isCircle?0:size*0.5) +'px',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>borderRadius: isCircle ? '50%' : '4px',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>background: colors[Math.floor(Math.random()*colors.length)],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>transition: 'transform 3s cubic-bezier(0.25, 1, 0.5, 1), opacity 3s',</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.body.appendChild(c);</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Trigger animation frame</p>
+<p class="p1"><span class="Apple-converted-space">      </span>requestAnimationFrame(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>c.style.transform = `translateY(${window.innerHeight + 50}px) rotate(${Math.random()*720}deg)`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>c.style.opacity = '0';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>setTimeout(()=&gt;c.remove(), 3000);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}, i*15);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
